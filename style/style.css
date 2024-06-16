@@ -1,0 +1,151 @@
+.img{
+    width: 9vh;
+}
+
+.nava{
+    display: flex;
+    justify-content: end;
+}
+
+.carousel-inner img {
+    width: 100%;
+    max-height: 60vh;
+}
+
+
+#carouselExampleIndicators{
+    height: 60vh;
+    background-color: aqua;
+}
+
+.form-check{
+    margin-top: 5vh;
+    margin-right: 4vh;
+    
+}
+
+.margin{
+    margin-top: 10vh;
+}
+
+.contenedor{
+    width: 65vh;
+    margin-top: 19vh;
+    
+}
+
+.mar{
+margin: 4vh;
+}
+
+.mb-3{
+    margin-top: 2vh;
+}
+
+footer{
+    
+    position:relative; 
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    
+    
+}
+
+.conts{
+    margin-top: 20vh;
+    height: 62vh;
+    
+}
+
+.img-fluid{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   margin-top: 1vh;
+    
+}
+
+.card-body{
+    margin-left: 4vh;
+}
+
+.table-container {
+    margin-top: 14vh;
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    width: 33.33vh; 
+}
+
+th {
+    background-color: rgb(136, 133, 133);
+}
+
+.img-footer{
+width: 5vh;
+height: 5vh;
+margin: 4vh;
+cursor: pointer;
+
+}
+
+.container-tex{
+    margin: 4vh;
+}
+
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.event-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    overflow: hidden;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.event-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.event-details {
+    padding: 10px;
+}
+
+.event-details h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.event-details p {
+    margin: 5px 0;
+}
+
+.til{
+    text-align: center;
+    margin-top: 20px
+}
+#Submit{
+    margin-top: 3vw;
+}
