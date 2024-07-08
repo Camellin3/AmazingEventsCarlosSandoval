@@ -45,56 +45,58 @@
 
     </nav>
   </header>
-  <div id="carouselExample" class="carousel slide">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="/imagenesPagina/optional_banner_2.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>CONTACT</h5>
-          <p>Some representative placeholder content for the third slide.</p>
+  <main>
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/imagenesPagina/optional_banner_2.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>CONTACT</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/imagenesPagina/optional_banner_4.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>CONTACT</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/imagenesPagina/optional_banner_3.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>CONTACT</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
         </div>
       </div>
-      <div class="carousel-item">
-        <img src="/imagenesPagina/optional_banner_4.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>CONTACT</h5>
-          <p>Some representative placeholder content for the third slide.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="/imagenesPagina/optional_banner_3.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>CONTACT</h5>
-          <p>Some representative placeholder content for the third slide.</p>
-        </div>
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  <div class="container contenedor">
-    <div>
+    <div class="container contenedor">
+      <div>
+        <div class="mb-3">
+          <label for="name" class="form-label">last name</label>
+          <input id="name" type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+        </div>
+      </div>
       <div class="mb-3">
-        <label for="name" class="form-label">last name</label>
-        <input id="name" type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+        <label for="email" class="form-label">Email</label>
+        <input id="email" type="email" class="form-control" placeholder="name@example.com">
       </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea id="message" class="form-control" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" id="Submit"> Submit</button>
     </div>
-    <div class="mb-3">
-      <label for="email" class="form-label">Email</label>
-      <input id="email" type="email" class="form-control" placeholder="name@example.com">
-    </div>
-    <div class="mb-3">
-      <label for="message" class="form-label">Message</label>
-      <textarea id="message" class="form-control" rows="3"></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary" id="Submit"> Submit</button>
-  </div>
+  </main>
 
   <footer class="footer ">
     <div>
@@ -109,6 +111,10 @@
       <h2>Amazing Events Carlos Sandoval</h2>
     </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 
 </body>
 
