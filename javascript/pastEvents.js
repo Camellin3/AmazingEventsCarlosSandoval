@@ -212,9 +212,23 @@ function recorrerFechas(array, fechaActual) {
 
   return { eventsPast, eventsUpcoming };
 }
+const events = data.events;
+const fechaActual = data.currentDate;
+
+const { eventsPast, eventsUpcoming } = recorrerFechas(events, fechaActual);
+console.log(eventsPast);
+
+
+
 
 function ponerTarjetas(array) {
+  let card = document.getElementById("cardContainer")
+  card.innerHTML = ''
 
+  if (array.length === 0) {
+    card.innerHTML = '<p>No se encontraron eventos que coincidan con la búsqueda.</p>'
+    return
+}
 
   for (let i = 0; i < array.length; i++) {
     const evento = array[i];
@@ -229,7 +243,7 @@ function ponerTarjetas(array) {
                 <p class="card-text">${evento.description}</p>
                 <div class="mt-auto d-flex justify-content-around align-items-center">
                     <h3 class="text-success mb-0">$${evento.price}</h3>
-                    <a href="/html/details.html" class="btn btn-primary">Details</a>
+                     <a href="./details.html?id=${evento.name}" id="botonDetails" class="btn btn-primary">Details</a>
                 </div>
             </div>
         </div>
@@ -238,13 +252,63 @@ function ponerTarjetas(array) {
   }
 
 }
+function filtrarEventos() {
+  const checkboxes = document.querySelectorAll('.form-check-input:checked')
+  const seleccartegoria = Array.from(checkboxes).map(checkbox => checkbox.value.toLowerCase())
 
-const events = data.events;
-const fechaActual = data.currentDate;
+  const searchText = document.getElementById('buscarTexto').value.trim().toLowerCase()
 
-const { eventsPast, eventsUpcoming } = recorrerFechas(events, fechaActual);
-console.log(eventsPast);
+  const filteredEvents = data.events.filter(evento => {
+      const categoryMatch = seleccartegoria.length === 0 || seleccartegoria.includes(evento.category.toLowerCase());
+      const textMatch = evento.name.toLowerCase().includes(searchText) || evento.description.toLowerCase().includes(searchText);
+
+      return categoryMatch && textMatch
+  })
+
+ ponerTarjetas(filteredEvents)
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const categories = []
 
 
-const cardContainer = document.getElementById('cardContainer');
+  data.events.forEach(event => {
+      if (!categories.includes(event.category)) {
+          categories.push(event.category)
+      }
+  })
+
+
+  const contenerdorChex = document.getElementById('contenerdorChex')
+
+  
+  let checkboxesHTML = ''
+
+  categories.forEach(category => {
+      const id = category.toLowerCase().replace(' ', '-') + '-checkbox'
+      const value = category.toLowerCase()
+
+      checkboxesHTML += `
+      <div class="check-1 d-flex align-items-center col-sm-1 col-md-1 col-lg-3 col-xl-2">
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="${id}" value="${value}">
+              <label class="form-check-label" for="${id}">${category}</label>
+          </div>
+      </div>
+  `
+  })
+
+  contenerdorChex.innerHTML = checkboxesHTML
+
+  const checkboxInputs = document.querySelectorAll('.form-check-input')
+  checkboxInputs.forEach(input => {
+      input.addEventListener('change', filtrarEventos)
+  })
+
+  const searchInput = document.getElementById('buscarTexto')
+  searchInput.addEventListener('input', filtrarEventos)
+
+  ponerTarjetas(eventsPast)
+})
 ponerTarjetas(eventsPast)
+
