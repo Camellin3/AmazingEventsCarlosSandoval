@@ -1,4 +1,4 @@
-let urlDetails = new URL("http://127.0.0.1:5501/html/details.html");
+let urlDetails = new URL("http://127.0.0.1:5500/html/details.html");
 
 export function generateCategoryCheckboxes(data, boxCheck) {
     let arrayCategories = [];
