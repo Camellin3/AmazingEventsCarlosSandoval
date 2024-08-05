@@ -80,95 +80,93 @@
             </button>
         </div>
 
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th class="text-start" colspan="3">Events stactisc</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Events width highest % of assistance</td>
-                        <td>Events width lowest % of assistance</td>
-                        <td>Events width Larger Capacity</td>
-                    </tr>
-                    <tr>
-                        <td>100%</td>
-                        <td>80.35%</td>
-                        <td>150000</td>
-                    </tr>
-                </tbody>
-            </table>
-            <table>
-                <thead>
-                    <tr>
-                        <th class="text-start" colspan="3">Upcoming events by category</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>category</td>
-                        <td>preventues</td>
-                        <td>porcentage % of assistance</td>
-                    </tr>
-                    <tr>
-                        <td>Costume Party</td>
-                        <td>Halloween Night</td>
-                        <td>75%</td>
-                    </tr>
+        <section class="p-5">
+            <div class="row justify-content-center py-5 w-100 tablas">
+                <div class="table-responsive col-md-10">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="table-dark" scope="col" colspan="3">Events statistics</th>                                
+                            </tr>                            
+                            <tr class="table-light">
+                                <td>Events with highest % of assistance</td>
+                                <td>Events with lowest % of assistance</td>
+                                <td>Events with larger capacity</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="text-center" id="eventName">
+                                <td>.</td>
+                                <td>.</td>
+                                <td>.</td>
+                            </tr>
+                            <tr class="text-center" id="eventNumbers">
+                                <td>.</td>
+                                <td>.</td>
+                                <td>.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="d-flex justify-content-evenly">
+                <div class="container-fluid">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="table-dark text-center" scope="col" colspan="3">Upcoming events statistics by category</th>                                
+                            </tr>
+                            <tr class="text-center table-light">
+                                <td>Categories</td>
+                                <td>Revenues</td>
+                                <td>Percentage of assistance</td>
+                            </tr>
+                        </thead>
+                        <tbody id="upcomingTBody">
+                            <tr>
+                                <td>.</td>
+                                <td>.</td>
+                                <td>.</td>
+                            </tr>
+                            <tr>
+                                <td>.</td>
+                                <td>.</td>
+                                <td>.</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                    <tr>
-                        <td>Music Concert</td>
-                        <td>Metallica in concert</td>
-                        <td>100%</td>
-                    </tr>
+                </div>
+                <div class="container-fluid">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="table-dark text-center" scope="col" colspan="3">Past Events Statistics by category</th>                                                                
+                            </tr>
+                            <tr class="table-light text-center">
+                                <td>Categories</td>
+                                <td>Revenues</td>
+                                <td>Percentage of assistance</td>
+                            </tr>
+                        </thead>
+                        <tbody id="pastEventTBody">
 
-                    <tr>
-                        <td>Let's go to the cinema</td>
-                        <td>Avengers</td>
-                        <td>100%</td>
-                    </tr>
-                </tbody>
-            </table>
-            <table>
-                <tbody>
-                    <tr>
-                        <th class="text-start" colspan="3">Past events by category</th>
-
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>category</td>
-                        <td>preventues</td>
-                        <td>porcentage % of assistance</td>
-                    </tr>
-                    <tr>
-                        <td>Food Fair</td>
-                        <td>Festival of the collectivities</td>
-                        <td>95.01%</td>
-                    </tr>
-
-                    <tr>
-                        <td>Museum</td>
-                        <td>Art Exhibition</td>
-                        <td>80.35%</td>
-                    </tr>
-                    <tr>
-                        <td>Race</td>
-                        <td>10K for life</td>
-                        <td>85.66%</td>
-                    </tr>
-                    <tr>
-                        <td>Book Exchange</td>
-                        <td>School Book Fair</td>
-                        <td>82.19%</td>
-                    </tr>
-                </tbody>
-            </table>
-
-        </div>
+                            <tr class="text-center">
+                                <td>.</td>
+                                <td>.</td>
+                                <td>.</td>
+                            </tr>
+                            <tr class="text-center">
+                                <td>.</td>
+                                <td>.</td>
+                                <td>.</td>
+                            </tr>
+                        </tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer ">
@@ -188,6 +186,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+        <script type="module" src="/javascript/stats.js"></script>
 </body>
 
 </html>
